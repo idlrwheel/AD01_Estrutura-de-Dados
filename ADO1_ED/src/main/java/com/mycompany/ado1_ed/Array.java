@@ -5,6 +5,6 @@
 package com.mycompany.ado1_ed;
 
 public class Array{
-  Cliente [ ] clientes = new Cliente [10];
-  
+  private Static Cliente [ ] clientes = new Cliente [10];
+  private static int indice = 0;
 }
