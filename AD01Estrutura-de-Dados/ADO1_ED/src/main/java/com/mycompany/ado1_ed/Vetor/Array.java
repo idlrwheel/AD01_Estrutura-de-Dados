@@ -57,6 +57,6 @@ public static Cliente[] alocarclientesArray(){
   for (int i = 0; i < clientes.length; i++) {
       novo[i] = clientes[i];
   }
-  retur novo;
+  return novo;
 }
   
