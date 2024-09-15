@@ -15,20 +15,21 @@ public class Principal {
         Scanner ot = new Scanner(System.in);
         Array clienteCom = new Array();
         Array clientePrime = new Array();
+        int opcao;
         
-        int opcao = ot.nextInt();
-        System.out.println("1. Inserir cliente - comum" + "/n" + "2. Inserir cliente - prime"
-        + "/n" + "3. Buscar cliente - nome" + "/n" + "4. Sair");
+        do {
+        	System.out.print("1. Inserir cliente - comum\n" + "2. Inserir cliente - prime\n" + "3. Buscar cliente - nome\n" + "4. Sair");
+        opcao = ot.nextInt();
         switch(opcao){
             case 1: 
                 System.out.println("Digite o nome do cliente comum:");
-                String nomeCom = ot.nextLine();
+                String nomeCom = ot.next();
                 System.out.println("Digite a idade do cliente comum:");
                 int idadeCom = ot.nextInt();
                 System.out.println("Digite o telefone do cliente comum:");
-                String telefoneCom = ot.nextLine();
+                String telefoneCom = ot.next();
                 System.out.println("Digite o email do cliente comum:");
-                String emailCom = ot.nextLine();
+                String emailCom = ot.next();
                 
                 Cliente novoClienteC = new Cliente(nomeCom, idadeCom, telefoneCom, emailCom);
                 Array.cadastrar(novoClienteC);
@@ -37,13 +38,13 @@ public class Principal {
                 
             case 2:
                 System.out.println("Digite o nome do cliente prime:");
-                String nomePri = ot.nextLine();
+                String nomePri = ot.next();
                 System.out.println("Digite a idade do cliente prime:");
                 int idadePri = ot.nextInt();
                 System.out.println("Digite o telefone do cliente prime:");
-                String telefonePri = ot.nextLine();
+                String telefonePri = ot.next();
                 System.out.println("Digite o email do cliente prime:");
-                String emailPri = ot.nextLine();
+                String emailPri = ot.next();
                 
                 Cliente novoClienteP = new Cliente(nomePri, idadePri, telefonePri, emailPri);
                 Array.cadastrar(novoClienteP);
@@ -68,5 +69,7 @@ public class Principal {
                 System.out.println("Opção inválida");
                 break;
         }
+       } while(opcao != 4);
     }
+     
 }
