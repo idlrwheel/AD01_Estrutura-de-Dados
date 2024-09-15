@@ -70,7 +70,7 @@ public class Array {
   }
   
   // método de pesquisa binária
-  public Cliente buscaBinaria(String nome){
+  public Cliente buscaBinaria(Cliente [] clientes, String nome){
       int esq = 0;
       int dir = clientes.length -1;
       
